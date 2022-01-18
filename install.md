@@ -19,3 +19,8 @@ pip install robotframework-browser
 
 Iniciar o Brower
 python3 -m Browser.entry init
+
+Organizando os Logs
+robot -d ./logs busca.robot
+ou 
+robot -d ./logs/ tests/busca.robot

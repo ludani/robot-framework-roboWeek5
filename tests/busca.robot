@@ -14,6 +14,10 @@ Example Test
 
     Click           css=.search-link
     Fill Text       css=input[formcontrolname="searchControl"]     Debuger
-    Sleep           10
-
+    
+    Wait For Elements State     css=.place-info-box-content     visible     10
     Get Text        css=.place-info-box-content     contains      DEBUGER KING
+    
+    #think time
+    Sleep           2
+    Take Screenshot
