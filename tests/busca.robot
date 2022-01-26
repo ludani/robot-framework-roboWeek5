@@ -2,7 +2,7 @@
 Library   Browser
 
 * Test Cases *
-Example Test
+Deve buscar um único restaurante
     New Browser     chromium     False
     New Page        http://parodifood.qaninja.academy/
     # Checkpoint
@@ -15,9 +15,9 @@ Example Test
     Click           css=.search-link
     Fill Text       css=input[formcontrolname="searchControl"]     Debuger
     
-    Wait For Elements State     css=.place-info-box-content     visible     10
+    Wait For Elements State     css=div[class="place-info-box"][style="opacity: 1;"]
     Get Text        css=.place-info-box-content     contains      DEBUGER KING
-    
-    #think time
-    Sleep           2
+
+    Get Element Count      css=.place-info-box     equal     1
+
     Take Screenshot
